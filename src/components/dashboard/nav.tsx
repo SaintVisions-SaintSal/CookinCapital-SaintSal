@@ -7,6 +7,7 @@ import { User } from '@supabase/supabase-js';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { Logo } from '@/components/ui/logo';
 import { createClient } from '@/lib/supabase/client';
 import type { Profile } from '@/types/database';
 import {
@@ -74,12 +75,7 @@ export function DashboardNav({ user, profile }: DashboardNavProps) {
           <Menu className="h-6 w-6" />
         </button>
         <div className="flex flex-1 items-center justify-between">
-          <Link href="/dashboard" className="flex items-center gap-2">
-            <div className="h-8 w-8 rounded-lg gold-gradient flex items-center justify-center">
-              <span className="font-bold text-black">S</span>
-            </div>
-            <span className="font-bold">SaintSal</span>
-          </Link>
+          <Logo href="/dashboard" size="sm" />
         </div>
       </div>
 
@@ -89,12 +85,7 @@ export function DashboardNav({ user, profile }: DashboardNavProps) {
           <div className="fixed inset-0 bg-black/50" onClick={() => setMobileMenuOpen(false)} />
           <div className="fixed inset-y-0 left-0 w-full max-w-xs bg-background p-6">
             <div className="flex items-center justify-between mb-6">
-              <Link href="/dashboard" className="flex items-center gap-2">
-                <div className="h-8 w-8 rounded-lg gold-gradient flex items-center justify-center">
-                  <span className="font-bold text-black">S</span>
-                </div>
-                <span className="font-bold">SaintSal</span>
-              </Link>
+              <Logo href="/dashboard" showTagline size="sm" />
               <button
                 type="button"
                 className="-m-2.5 p-2.5"
@@ -129,12 +120,7 @@ export function DashboardNav({ user, profile }: DashboardNavProps) {
       <div className="hidden lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-72 lg:flex-col">
         <div className="flex grow flex-col gap-y-5 overflow-y-auto border-r bg-background px-6 pb-4">
           <div className="flex h-16 shrink-0 items-center">
-            <Link href="/dashboard" className="flex items-center gap-2">
-              <div className="h-8 w-8 rounded-lg gold-gradient flex items-center justify-center">
-                <span className="font-bold text-black">S</span>
-              </div>
-              <span className="font-bold text-lg">SaintSal</span>
-            </Link>
+            <Logo href="/dashboard" showTagline size="md" />
           </div>
           <nav className="flex flex-1 flex-col">
             <ul className="flex flex-1 flex-col gap-y-1">
