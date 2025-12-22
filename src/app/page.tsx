@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Logo } from '@/components/ui/logo';
 import {
   MessageSquare,
   Home,
@@ -83,14 +84,9 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-background to-muted">
       {/* Header */}
-      <header className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <header className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50">
         <div className="container mx-auto flex h-16 items-center justify-between px-4">
-          <div className="flex items-center gap-2">
-            <div className="h-8 w-8 rounded-lg gold-gradient flex items-center justify-center">
-              <span className="font-bold text-black">S</span>
-            </div>
-            <span className="font-bold text-xl">SaintSal</span>
-          </div>
+          <Logo href="/" showTagline size="md" />
           <nav className="hidden md:flex items-center gap-6">
             <Link href="#features" className="text-sm font-medium hover:text-primary transition-colors">
               Features
@@ -240,12 +236,7 @@ export default function HomePage() {
       <footer className="border-t bg-background">
         <div className="container mx-auto px-4 py-12">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="flex items-center gap-2">
-              <div className="h-8 w-8 rounded-lg gold-gradient flex items-center justify-center">
-                <span className="font-bold text-black">S</span>
-              </div>
-              <span className="font-bold">SaintSal</span>
-            </div>
+            <Logo href="/" showTagline size="sm" />
             <p className="text-sm text-muted-foreground">
               &copy; {new Date().getFullYear()} Saint Vision Technologies LLC. All rights reserved.
             </p>
