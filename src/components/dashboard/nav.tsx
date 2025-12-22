@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import { User } from '@supabase/supabase-js';
 import { cn } from '@/lib/utils';
-import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Logo } from '@/components/ui/logo';
 import { createClient } from '@/lib/supabase/client';

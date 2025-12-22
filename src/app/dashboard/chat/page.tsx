@@ -1,9 +1,8 @@
 'use client';
 
-import { useState, useEffect, useRef, useCallback } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Card, CardContent } from '@/components/ui/card';
 import {
   Select,
   SelectContent,
@@ -11,7 +10,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
-import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import { AI_MODELS, type AIModel } from '@/lib/ai';
 import { cn, formatRelativeTime } from '@/lib/utils';
 import { LogoIcon } from '@/components/ui/logo';
@@ -31,8 +29,6 @@ import {
   Mic,
   Paperclip,
   Search,
-  MoreHorizontal,
-  Trash2,
   ChevronRight,
   Zap,
   Building2,
@@ -425,7 +421,7 @@ export default function ChatPage() {
                       <div className="prose prose-sm dark:prose-invert max-w-none">
                         <ReactMarkdown
                           components={{
-                            code({ node, className, children, ...props }) {
+                            code({ className, children, ...props }) {
                               const match = /language-(\w+)/.exec(className || '');
                               const isInline = !match;
                               return isInline ? (
